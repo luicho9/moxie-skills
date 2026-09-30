@@ -7,7 +7,7 @@ description: Turn a PM's product request into an engineer-ready Orkestrr task. U
 
 A PM describes what they want. You explore the codebase read-only, draft a **brief**, and after the PM approves it, create a draft task in Orkestrr. An engineer picks it up from there.
 
-The PM owns product decisions. You own every fact you can find in the code. Speak to the PM in product language: behavior, users, screens. Keep file names and code out of the conversation unless the PM asks.
+The PM owns product decisions. You own every fact you can find in the code. The code is the **source of truth**; Orkestrr is only the **destination** for the finished brief. Speak to the PM in product language: behavior, users, screens. Keep file names and code out of the conversation unless the PM asks.
 
 This session is **read-only**: read files and run read-only commands (`git`, `grep`, `ls`, `cat`). The one write is step 2's `git checkout main` and `git pull`. Otherwise leave the working tree exactly as you found it: no edits, no commits, no installs.
 
@@ -33,12 +33,11 @@ Flag **risk** when the change touches any of: patient data (PHI), authentication
 
 Done when you can name the key interfaces that must change and the current behavior is confirmed in code, not assumed.
 
-### 4. Check it isn't already done
+### 4. Check it isn't already built
 
-- **Built:** search the code for the desired behavior by concept, not just by the PM's wording. If it already exists, tell the PM where it shows up in the product and stop.
-- **Ticketed:** follow [ORKESTRR.md](ORKESTRR.md) to find the project and goal, then `list_tasks` with a `search` for the concept. If a matching task exists, show it to the PM and ask whether to stop or continue.
+Search the code for the desired behavior by concept, not just by the PM's wording. If it already exists, tell the PM where it shows up in the product and stop.
 
-Done when both checks are reported to the PM.
+Done when the result is reported to the PM.
 
 ### 5. Ask only blocking decisions
 
@@ -52,7 +51,7 @@ Done when every blocking question has an answer.
 
 ### 6. Draft the brief
 
-Write the brief using [BRIEF.md](BRIEF.md). Show it to the PM along with the target project, goal, and labels.
+Write the brief using [BRIEF.md](BRIEF.md). Then follow [ORKESTRR.md](ORKESTRR.md) to pick the target project, goal, and labels, and show the brief to the PM alongside them.
 
 Done when the PM approves it. Apply edits the PM asks for and show it again.
 

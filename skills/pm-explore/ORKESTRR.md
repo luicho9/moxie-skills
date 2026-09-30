@@ -1,6 +1,6 @@
 # Orkestrr
 
-Tasks are created through the Orkestrr MCP (`orkestrr-mcp`). The hierarchy is Project > Bundle > Goal > Task, and every task lives under an active goal.
+Tasks are created through the Orkestrr MCP (`orkestrr-mcp`). Orkestrr is the destination, not a source: read only what placement needs (projects, goals, labels, members). The hierarchy is Project > Bundle > Goal > Task, and every task lives under an active goal.
 
 If a tool fails with "Not logged in" or "Session expired", ask the PM to run `okr login` and retry.
 
@@ -8,11 +8,7 @@ If a tool fails with "Not logged in" or "Session expired", ask the PM to run `ok
 
 1. `list_projects(search=...)` to find the project for the product area.
 2. `list_goals(project_id=..., status=...)` to list active goals. Pick the one that matches the request.
-3. If more than one goal fits, or none does, include the candidates in step 5's questions with your recommendation. Creating goals is the PM's call outside this skill, so leave goals and bundles unchanged.
-
-## Check for duplicates
-
-`list_tasks(project_id=..., search="<concept>")`. Try two or three phrasings of the concept. Summaries are enough to spot a match; use `get_task` to confirm a likely one.
+3. If more than one goal fits, or none does, list the candidates with the draft and recommend one. Creating goals is the PM's call outside this skill, so leave goals and bundles unchanged.
 
 ## Labels
 
